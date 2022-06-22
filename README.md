@@ -1,1 +1,1 @@
-# dotfiles
+# Mentések a konfigurációs fájlokról.
