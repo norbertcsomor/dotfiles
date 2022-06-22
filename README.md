@@ -1,1 +1,1 @@
-# Mentések a konfigurációs fájlokról.
+# Biztonsági mentések a konfigurációs fájlokról.
