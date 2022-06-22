@@ -1,0 +1,11 @@
+sudo ufw enable 
+sudo apt update && sudo apt upgrade -y
+sudo apt install htop mousepad redshift ubuntu-restricted-extras 
+sudo apt install lightdm-gtk-greeter-settings thunar-archive-plugin xarchiver 
+sudo apt install feh i3 lxappearance volumeicon-alsa 
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb 
+sudo snap remove firefox
+sudo apt install firefox firefox-locale-hu
+sudo nano /etc/default/grub
+sudo update-grub
