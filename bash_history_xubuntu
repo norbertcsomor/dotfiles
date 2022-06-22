@@ -1,7 +1,6 @@
 sudo ufw enable 
 sudo apt update && sudo apt upgrade -y
-sudo apt install htop mousepad redshift ubuntu-restricted-extras 
-sudo apt install lightdm-gtk-greeter-settings thunar-archive-plugin xarchiver 
+sudo apt install htop lightdm-gtk-greeter-settings mc mousepad redshift thunar-archive-plugin ubuntu-restricted-extras xarchiver 
 sudo apt install feh i3 lxappearance volumeicon-alsa 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb 
