@@ -1,40 +1,34 @@
-# i3 konfigurációs beállítások | Mod1 = (bal) Alt gomb
+# i3 konfigurációs beállítások 
 font pango: Sans 12
 new_float normal
-floating_modifier Mod1
 hide_edge_borders both
 for_window [urgent=latest] focus
 for_window [class="^.*"] border pixel 1
-# Automatikusan induló programok
-exec feh --bg-fill ~/Downloads/wallpaper.jpg
+# Automatikusan induló programok és beállítások
+exec nitrogen --restore
 exec redshift -O 3500
 exec nm-applet
 exec volumeicon
-exec xmodmap -e "clear lock"
-exec xmodmap -e "keysym Caps_Lock = Escape"
-# Billentyűkombinációk
+exec setxkbmap -option caps:escape_shifted_capslock 
+# Billentyűkombinációk | Mod1 = (bal) Alt gomb | Mod4 = Win (Super) gomb
 bindsym Mod1+c exec google-chrome
 bindsym Mod1+d exec dmenu_run -p "dmenu:"
-bindsym Mod1+x exec i3-sensible-terminal
-bindsym Mod1+e exec pcmanfm
+bindsym Mod1+x exec lxterminal
 bindsym Mod1+v exec code
 bindsym Mod1+q kill
-bindsym Mod1+r restart
-bindsym Mod1+Shift+e exit
-bindsym Mod1+f fullscreen toggle
+bindsym Mod1+b exec systemctl suspend
+bindsym Mod1+u exec systemctl reboot
+bindsym Mod1+k exec systemctl poweroff
 bindsym Mod1+1 workspace number "1"
 bindsym Mod1+2 workspace number "2"
 bindsym Mod1+3 workspace number "3"
 bindsym Mod1+Shift+1 move container to workspace number "1"
 bindsym Mod1+Shift+2 move container to workspace number "2"
 bindsym Mod1+Shift+3 move container to workspace number "3"
-bindsym Mod1+F1 exec pactl set-sink-mute 0 toggle
-bindsym Mod1+F2 exec pactl set-sink-volume 0 -5% 
-bindsym Mod1+F3 exec pactl set-sink-volume 0 +5%
-bindsym Mod1+b exec systemctl suspend
-bindsym Mod1+u exec systemctl reboot
-bindsym Mod1+k exec systemctl poweroff
-# Alsó panel konfigurációs beállítások
+bindsym Mod4+1 exec pactl set-sink-mute 0 toggle
+bindsym Mod4+2 exec pactl set-sink-volume 0 -5% 
+bindsym Mod4+3 exec pactl set-sink-volume 0 +5%
+# Alsó panel beállítások
 bar {
     status_command i3status --config ~/.config/i3/i3status.conf
 }
